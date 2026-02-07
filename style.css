@@ -1,82 +1,110 @@
-/* =====================
-   ОБЩИЕ НАСТРОЙКИ
-===================== */
+/* ОБЩЕЕ */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
     background-color: #0e0e0e;
-    color: #e5e5e5;
-    line-height: 1.7;
+    color: #eaeaea;
+    line-height: 1.8;
+    font-size: 18px;
 }
 
-/* =====================
-   ГЛАВНЫЙ ЭКРАН
-===================== */
+/* ШАПКА */
 
 .hero {
-    min-height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url("images/hero.png");
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    background: url("images/hero.png") center / cover no-repeat;
+    padding: 80px 20px 60px;
     text-align: center;
-    padding: 40px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
 }
 
 .hero-content {
-    max-width: 700px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.hero h1 span {
-    color: #7a1e2d;
-    margin: 0 10px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .divider {
-    width: 80px;
+    width: 70px;
     height: 1px;
     background-color: #7a1e2d;
-    margin: 30px auto;
+    margin: 25px auto;
 }
 
-.hero .date {
-    font-size: 18px;
-    letter-spacing: 3px;
-    color: #c9a5ad;
-}
-
-.hero .subtitle {
-    margin-top: 30px;
-    font-size: 20px;
+.subtitle {
     font-style: italic;
+    font-size: 20px;
 }
 
-/* =====================
-   СЕКЦИИ
-===================== */
+/* ФОТО В ШАПКЕ */
+
+.hero-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.photo-frame {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.photo-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-frame::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(122, 30, 45, 0.5);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+/* ДАТА */
+
+.date-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    letter-spacing: 6px;
+    color: #7a1e2d;
+    margin-top: 20px;
+}
+
+/* СЕКЦИИ */
 
 .section {
-    padding: 90px 20px;
+    padding: 70px 20px;
     text-align: center;
-    background-color: #0e0e0e;
 }
 
 .section.dark {
@@ -86,103 +114,128 @@ body {
 .section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 34px;
-    margin-bottom: 35px;
-    position: relative;
 }
 
 .section h2::after {
     content: "";
+    display: block;
     width: 50px;
     height: 2px;
     background-color: #7a1e2d;
-    display: block;
-    margin: 20px auto 0;
+    margin: 20px auto;
 }
 
-.section p {
-    max-width: 700px;
-    margin: 0 auto 12px;
-    font-size: 18px;
-}
+/* ПРОГРАММА */
 
-/* =====================
-   ТАЙМИНГ
-===================== */
-
-.timeline {
+.program {
     list-style: none;
     padding: 0;
-    max-width: 420px;
-    margin: 0 auto;
-}
-
-.timeline li {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    font-size: 18px;
-}
-
-.timeline li span {
-    color: #7a1e2d;
-    font-weight: 500;
-}
-
-/* =====================
-   ГАЛЕРЕЯ
-===================== */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    max-width: 900px;
+    max-width: 520px;
     margin: 40px auto 0;
 }
 
-.gallery img {
-    width: 100%;
-    border-radius: 14px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease;
+.program li {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-.gallery img:hover {
-    transform: scale(1.04);
+.program span {
+    color: #7a1e2d;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
 }
 
-/* =====================
-   КНОПКА
-===================== */
+/* ДЕТАЛИ */
+
+.details {
+    display: grid;
+    gap: 22px;
+    max-width: 720px;
+    margin: 40px auto 0;
+}
+
+.detail-item {
+    padding: 28px;
+    border: 1px solid #7a1e2d;
+}
+
+/* ДРЕСС-КОД */
+
+.dresscode {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 420px;
+    margin: 40px auto;
+}
+
+.color {
+    aspect-ratio: 1 / 1;
+    background-color: #7a1e2d;
+}
+
+/* КНОПКА */
 
 .button {
     display: inline-block;
-    margin-top: 40px;
-    padding: 18px 46px;
+    padding: 18px 40px;
     border: 1px solid #7a1e2d;
     color: #7a1e2d;
     text-decoration: none;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    letter-spacing: 2px;
 }
 
-.button:hover {
-    background-color: #7a1e2d;
-    color: #ffffff;
+/* КОНТАКТЫ */
+
+.contacts p {
+    margin: 12px 0;
 }
 
-/* =====================
-   ПОДВАЛ
-===================== */
+/* ПОДВАЛ */
 
 footer {
-    background-color: #0b0b0b;
-    padding: 30px 20px;
+    padding: 30px;
+    font-size: 15px;
+    color: #999;
     text-align: center;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #888;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 19px;
+    }
+
+    .hero {
+        padding: 60px 16px 40px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .hero-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 16px;
+    }
+
+    .dresscode {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .date-value {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
 }
