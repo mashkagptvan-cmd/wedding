@@ -1,0 +1,188 @@
+/* =====================
+   ОБЩИЕ НАСТРОЙКИ
+===================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #0e0e0e;
+    color: #e5e5e5;
+    line-height: 1.7;
+}
+
+/* =====================
+   ГЛАВНЫЙ ЭКРАН
+===================== */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.hero h1 span {
+    color: #7a1e2d;
+    margin: 0 10px;
+}
+
+.divider {
+    width: 80px;
+    height: 1px;
+    background-color: #7a1e2d;
+    margin: 30px auto;
+}
+
+.hero .date {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #c9a5ad;
+}
+
+.hero .subtitle {
+    margin-top: 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* =====================
+   СЕКЦИИ
+===================== */
+
+.section {
+    padding: 90px 20px;
+    text-align: center;
+    background-color: #0e0e0e;
+}
+
+.section.dark {
+    background-color: #151515;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #7a1e2d;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto 12px;
+    font-size: 18px;
+}
+
+/* =====================
+   ТАЙМИНГ
+===================== */
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.timeline li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 18px;
+}
+
+.timeline li span {
+    color: #7a1e2d;
+    font-weight: 500;
+}
+
+/* =====================
+   ГАЛЕРЕЯ
+===================== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* =====================
+   КНОПКА
+===================== */
+
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 46px;
+    border: 1px solid #7a1e2d;
+    color: #7a1e2d;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #7a1e2d;
+    color: #ffffff;
+}
+
+/* =====================
+   ПОДВАЛ
+===================== */
+
+footer {
+    background-color: #0b0b0b;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #888;
+}
