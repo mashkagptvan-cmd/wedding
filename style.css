@@ -229,14 +229,14 @@ body {
     background-color: #7a1e2d;
 }
 
-.color:nth-child(1) { background: #7a1e2d; }
-.color:nth-child(2) { background: #3a0f16; }
-.color:nth-child(3) { background: #b08d57; }
-.color:nth-child(4) { background: #1f1f1f; }
-.color:nth-child(5) { background: #5c2a34; }
-.color:nth-child(6) { background: #2b1a1d; }
-.color:nth-child(7) { background: #8f3a4a; }
-.color:nth-child(8) { background: #111111; }
+.color:nth-child(1) { background: #e9e6df; }
+.color:nth-child(2) { background: #191a1e; }
+.color:nth-child(3) { background: #241a1d; }
+.color:nth-child(4) { background: #0e0e0f; }
+.color:nth-child(5) { background: #e3d3e2; }
+.color:nth-child(6) { background: #1e100f; }
+.color:nth-child(7) { background: #c8c2b7; }
+.color:nth-child(8) { background: #30050e; }
 
 .color {
     border-radius: 6px;
@@ -315,3 +315,4 @@ footer {
         letter-spacing: 4px;
     }
 }
+
