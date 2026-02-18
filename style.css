@@ -12,7 +12,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Gentium Book Plus', serif;
     background-color: #0e0e0e;
     color: #eaeaea;
     line-height: 1.8;
@@ -52,7 +52,7 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Gentium Book Plus', serif;
     font-size: 44px;
     margin-bottom: 12px;
 }
@@ -113,7 +113,7 @@ body {
     content: "";
     position: absolute;
     inset: 6px;
-    border: 1px solid rgba(122,30,45,0.5);
+    border: /*1px solid rgba(122,30,45,0.5)*/ none;
     border-radius: 10px;
 }
 
@@ -131,19 +131,21 @@ body {
     padding: 80px 20px;
     background: linear-gradient(
         180deg,
-        #0e0e0e 0%,
-        #151515 100%
+        #681B19 0%,
+        #430D0C 100%
     );
     overflow: hidden;
-    text-align: center; /* фикс центрирования */
+    text-align: center;
+    color: #DFC4A6;
 }
 
 .section.dark {
     background: linear-gradient(
         180deg,
-        #141010 0%,
-        #1b1214 100%
+        #FFF1DF 0%,
+        #DFC4A6 100%
     );
+    color: #430D0C;
 }
 
 .section::after {
@@ -159,7 +161,7 @@ body {
 }
 
 .section h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Gentium Book Plus', serif;
     font-size: 34px;
     margin-bottom: 10px;
 }
@@ -178,10 +180,10 @@ body {
 ===================================================== */
 
 .date-value {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Gentium Book Plus', serif;
     font-size: 46px;
     letter-spacing: 6px;
-    color: #7a1e2d;
+    color: #DFC4A6;
     margin-top: 20px;
 }
 
@@ -212,8 +214,9 @@ body {
     display: flex;
     gap: 20px;
     padding: 20px 0 20px 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(69, 11, 3, 0.97);
     position: relative;
+    border-radius: 12px;
 }
 
 .program span {
@@ -238,7 +241,8 @@ body {
 .detail-item {
     padding: 28px;
     border: 1px solid #7a1e2d;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0);
+    border-radius: 18px;
 }
 
 /* =====================================================
@@ -282,6 +286,7 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     transition: all 0.3s ease;
+    border-radius: 18px;
 }
 
 .button:hover {
@@ -307,6 +312,7 @@ body {
     transition: all 0.3s ease;
     backdrop-filter: blur(6px);
     z-index: 999;
+    border-radius: 30px;
 }
 
 .music-control:hover {
@@ -382,4 +388,21 @@ footer {
         font-size: 38px;
         letter-spacing: 4px;
     }
+}
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.3);
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    transition: 0.3s ease;
+}
+
+.map-button:hover {
+    background: #ffffff;
+    color: #6e5555;
 }
