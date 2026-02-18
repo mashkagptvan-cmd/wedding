@@ -33,7 +33,7 @@
 <section class="section reveal">
     <div class="container">
         <h2>Дата</h2>
-        <p class="date-value">07.06.2026</p>
+        <p class="date-value">07.06.2025</p>
     </div>
 </section>
 
@@ -83,6 +83,7 @@
             <div class="color"></div><div class="color"></div>
             <div class="color"></div><div class="color"></div>
             <div class="color"></div><div class="color"></div>
+	    <div class="color"></div><div class="color"></div>
         </div>
 
         <p>Это не требование, а рекомендация, но, пожалуйста, не оттеняйте невесту блистательным белым нарядом</p>
@@ -120,7 +121,7 @@
 </section>
 
 <footer>
-    <p>Made by “The Vershinins Inc.” & ChatGPT</p>
+    <p>Made by “Vershinins Inc.” & ChatGPT</p>
 </footer>
 
 <script>
@@ -137,7 +138,25 @@ const observer = new IntersectionObserver(entries => {
 reveals.forEach(el => observer.observe(el));
 </script>
 
+<audio id="bg-music" loop>
+    <source src="music/theme.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById('bg-music');
+
+if (sessionStorage.getItem('playMusic') === 'yes') {
+    music.volume = 0;
+    music.play().then(() => {
+        let v = 0;
+        const fade = setInterval(() => {
+            v += 0.05;
+            music.volume = Math.min(v, 0.6);
+            if (v >= 0.6) clearInterval(fade);
+        }, 200);
+    }).catch(() => {});
+}
+</script>
+
 </body>
 </html>
-
-
