@@ -68,11 +68,23 @@
 
 <script>
 document.getElementById('enter').addEventListener('click', () => {
-    sessionStorage.setItem('playMusic', 'yes');
-    window.location.href = 'main.html';
+
+    // создаём аудио заранее
+    const audio = new Audio("music/theme.mp3");
+    audio.loop = true;
+    audio.volume = 0.6;
+
+    // запускаем звук в момент клика
+    audio.play().then(() => {
+        // сохраняем флаг
+        sessionStorage.setItem('musicStarted', 'true');
+        window.location.href = 'main.html';
+    }).catch(() => {
+        window.location.href = 'main.html';
+    });
+
 });
 </script>
 
 </body>
 </html>
-
