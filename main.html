@@ -33,7 +33,7 @@
 <section class="section reveal">
     <div class="container">
         <h2>Дата</h2>
-        <p class="date-value">07.06.2026</p>
+        <p class="date-value">07.06.2025</p>
     </div>
 </section>
 
@@ -45,7 +45,7 @@
         <ul class="program">
             <li><span>01</span><p>17:30 — Сбор гостей, знакомство, фуршет</p></li>
             <li><span>02</span><p>18:30 — Церемония у входа в усадьбу</p></li>
-            <li><span>03</span><p>19:30 — Ужин</p></li>
+            <li><span>03</span><p>19:00 — Ужин</p></li>
             <li><span>04</span><p>23:00 — ДиСкОтЕкА</p></li>
             <li><span>05</span><p>24:00 — По домам, дохлёбываем и расход</p></li>
         </ul>
@@ -56,7 +56,7 @@
 <section class="section reveal">
     <div class="container">
         <h2>Локация</h2>
-        <p>Roden Manor, Старосадский переулок, 5/8, Москва</p>
+        <p>Усадьба «Роден», Старосадский переулок, 5/8, Москва</p>
     </div>
 </section>
 
@@ -83,7 +83,7 @@
             <div class="color"></div><div class="color"></div>
             <div class="color"></div><div class="color"></div>
             <div class="color"></div><div class="color"></div>
-	    	<div class="color"></div><div class="color"></div>
+	    <div class="color"></div><div class="color"></div>
         </div>
 
         <p>Это не требование, а рекомендация, но, пожалуйста, не оттеняйте невесту блистательным белым нарядом</p>
@@ -121,7 +121,7 @@
 </section>
 
 <footer>
-    <p>Made by “The Vershinins Inc.” & ChatGPT</p>
+    <p>Made by “Vershinins Inc.” & ChatGPT</p>
 </footer>
 
 <script>
@@ -145,19 +145,15 @@ reveals.forEach(el => observer.observe(el));
 <script>
 const music = document.getElementById('bg-music');
 
-if (sessionStorage.getItem('playMusic') === 'yes') {
-    music.volume = 0;
-    music.play().then(() => {
-        let v = 0;
-        const fade = setInterval(() => {
-            v += 0.05;
-            music.volume = Math.min(v, 0.6);
-            if (v >= 0.6) clearInterval(fade);
-        }, 200);
-    }).catch(() => {});
+if (sessionStorage.getItem('musicStarted') === 'true') {
+
+    music.volume = 0.6;
+
+    music.play().catch(() => {
+        console.log("Автозапуск заблокирован");
+    });
+
 }
 </script>
-
 </body>
 </html>
-
