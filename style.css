@@ -245,7 +245,7 @@ body {
 
 .dresscode {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 14px;
     max-width: 420px;
     margin: 40px auto;
@@ -257,14 +257,16 @@ body {
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
 }
 
-.color:nth-child(1) { background: #7a1e2d; }
-.color:nth-child(2) { background: #3a0f16; }
-.color:nth-child(3) { background: #b08d57; }
-.color:nth-child(4) { background: #1f1f1f; }
-.color:nth-child(5) { background: #5c2a34; }
-.color:nth-child(6) { background: #2b1a1d; }
-.color:nth-child(7) { background: #8f3a4a; }
-.color:nth-child(8) { background: #111111; }
+.color:nth-child(1) { background: #130202; }
+.color:nth-child(2) { background: #500E0E; }
+.color:nth-child(3) { background: #421E08; }
+.color:nth-child(4) { background: #634C4C; }
+.color:nth-child(5) { background: #8B8874; }
+.color:nth-child(6) { background: #BDB89C; }
+.color:nth-child(7) { background: #9D806E; }
+.color:nth-child(8) { background: #FDF5D4; }
+.color:nth-child(9) { background: #D7B1B1; }
+.color:nth-child(10) { background: #E7DAD4; }
 
 /* =====================================================
    КНОПКА
